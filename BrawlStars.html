@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <a href="BrawlStars.html"><img src="Brawl Stars Logo.png" alt="BRAWLSTARS" width="100"></a>
+        <div class="boutons">
+            <a href="Brawlers.html" class="bouton">BRAWLERS</a>
+            <a href="ModeDeJeu.html" class="bouton">MODES</a>
+            <a href="Communauté.html" class="bouton">COMMUNAUTE</a> 
+            <a href="Connexion.html" class="bouton">S'INSCRIRE</a> 
+        </div>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .boutons {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: flex;
+                gap: 10px;
+            }
+        
+            .bouton {
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-family: "Lilita One", sans-serif;
+            }
+        
+            .bouton:hover {
+                background-color: #0056b3;
+            }
+            .toggle-content {
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+            }
+
+            .toggle-content.show {
+                opacity: 1;
+            }
+
+            .toggle-title {
+                cursor: pointer; /* Change le curseur pour montrer que c'est cliquable */
+                color: #007bff;
+                font-family: "Lilita One", sans-serif;
+                text-align: center;
+            }
+            .toggle-title:hover {
+                color: #0056b3;
+            }
+        </style>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.querySelectorAll(".toggle-title").forEach(title => {
+                        title.addEventListener("click", function () {
+                            let content = this.nextElementSibling; // Prend le texte juste en dessous du h1
+
+                            if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                            content.classList.remove("show");
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                            content.classList.add("show");
+                        }
+            });
+        });
+    });
+            </script>
+    </head>
+    <body>
+        <h1><FONT face="Lilita One"><center>Bienvenue sur LE site ultime dédié à Brawl Stars ! Découvrez tout ce qu’il faut savoir sur le jeu, ses brawlers, ses modes de jeu et bien plus encore !!</center></FONT></h1>
+        
+        <div id="pseudo-display">Veuillez vous connecter.</div>
+    
+        <script>
+          // Lorsque la page est chargée, récupérer le pseudo depuis sessionStorage
+          window.onload = function() {
+            const pseudo = sessionStorage.getItem("pseudo");
+            if (pseudo) {
+              document.getElementById("pseudo-display").textContent = `Bienvenue, ${pseudo}!`;
+            } else {
+              document.getElementById("pseudo-display").textContent = "Veuillez vous connecter.";
+            }
+          };
+        </script>
+        
+        <FONT face="Lilita One"><center>↓↓ CLIQUER SUR LES TITRES POUR AFFICHER LE TEXTE ↓↓</center></FONT>
+        <h1 class="toggle-title">Brawl Stars's presentation</h1>
+            <div class="toggle-content">
+                <p>            
+                    Brawl Stars est un jeu mobile développé par Supercell, combinant action, stratégie et coopération.<br> 
+                    Ce jeu de tir en arène permet d'affronter d'autres joueurs en ligne dans divers modes de jeu dynamiques, allant du classique match à mort en équipe à des modes plus originaux comme le Braquage ou le Survivant (Battle Royale). <br>
+                    Chaque brawler possède des capacités uniques, incitant les joueurs à adapter leur stratégie en fonction de leur équipe et de l'adversaire.<br>
+                    Avec des mises à jour régulières, des événements spéciaux et un système de progression basé sur les trophées et la maîtrise des personnages, Brawl Stars offre une expérience compétitive et fun, idéale pour les amateurs de jeux multijoueurs rapides et tactiques.<br><br>
+                </p>
+            </div>
+        <h1 class="toggle-title">Gameplay</h1>
+            <div class="toggle-content">
+                <p>
+                    Pour bien commencer, étudions l’interface utilisateur (UI) de Brawl Stars. Voici un aperçu des boutons présents à l’écran.<br><br>
+                    <img src="Gameplay.jpg" width="1000"><br><br>
+                    <ol>
+                        <li>Dans la partie gauche de l'écran :
+                            <ul>
+                                <li>Un joystick de déplacement, permettant au joueur de se mouvoir sur le terrain en faisant glisser son doigt dessus.</li>
+                            </ul>
+                        </li>
+                        <li>Dans la partie droite de l'écran :
+                            <ul>
+                                <li>Un bouton rouge, servant à viser et tirer avec l’attaque principale du brawler (chaque brawler possède une attaque unique).</li>
+                                <li>Un bouton jaune, se remplissant après plusieurs tirs réussis, permettant d’activer le super du brawler (une capacité spéciale propre à chaque personnage).</li>
+                                <li>Un bouton vert, ayant un temps de recharge (cooldown), permettant d’utiliser un gadget spécifique au brawler.</li>
+                                <li>Un bouton violet, se chargeant après plusieurs tirs réussis avec l’attaque principale ou le super, servant à activer l’Hypercharge, une version améliorée du super.</li>
+                                <li>Des émotes (en blanc) et des tags (en bleu), situés en haut à droite, permettant de communiquer avec les autres joueurs en envoyant des messages visuels.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </p>
+            </div>
+        <h1 class="toggle-title">Guide pour les Débutants</h1>
+            <div class="toggle-content">
+                Tu débutes sur Brawl Stars et tu veux progresser rapidement ? Voici les bases essentielles pour bien commencer ton aventure !<br><br>
+                <ol>
+                    <li>Débloquer des Brawlers</li>
+                        <ul>
+                            <li>Les brawlers peuvent être obtenus en progressant dans le Brawl Pass, via la Route des Trophées, dans les prix starr ou en les achetant avec des gemmes.</li>
+                            <li>Certains brawlers sont plus rares que d’autres, allant de rares à légendaires.</li>
+                        </ul>
+                    <li>Comprendre les Trophées</li>
+                        <ul>
+                            <li>Chaque brawler possède ses propres trophées : plus tu en gagnes, plus tu montes dans le classement.</li>
+                            <li>À la fin de chaque saison, un système de réinitialisation réduit une partie de tes trophées élevés (au dessus de 1000 trophées), mais te récompense avec une boite de saison.</li>
+                        </ul>
+                    <li>S’améliorer en Combat</li>
+                        <ul>
+                            <li>Joue en équipe : la communication et la stratégie sont essentielles pour gagner.</li>
+                            <li>Évite d’attaquer seul : joue avec tes coéquipiers pour maximiser tes chances de victoire.</li>
+                            <li>Maîtrise ton brawler : chaque personnage a ses forces et faiblesses, apprends à les exploiter.</li>
+                        </ul>
+                    <li>Gagner des Récompenses</li>
+                        <ul>
+                            <li>Le Brawl Pass propose des récompenses exclusives (crédits, skins, pièces, gemmes…).</li>
+                            <li>Les missions quotidiennes permettent d’accélérer la progression.</li>
+                            <li>En accumulant des pièces, des points de pouvoirs et des crédits, tu pourras améliorer tes brawlers et en débloquer de nouveaux.</li>
+                        </ul>
+                </ol>
+                Avec ces bases, tu es prêt à te lancer dans l’action et devenir un vrai pro de Brawl Stars !
+            </div>
+    </body>
+</html>
