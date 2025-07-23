@@ -1,0 +1,44 @@
+body,
+header {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100vw;
+    height: 100px;
+    /* Ajuste selon ton besoin */
+    background: url('brawl_stars_lobby.jpg') top center no-repeat;
+    background-size: cover;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    /* Espace entre logo et boutons */
+}
+
+.boutons {
+    position: static;
+    display: flex;
+    gap: 10px;
+}
+
+.bouton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "Lilita One", sans-serif;
+}
+
+.bouton:hover {
+    background-color: #0056b3;
+}
