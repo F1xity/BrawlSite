@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../header.css">
+</head>
+
+<body>
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <div> id="header-placeholder"></div>
+
+    <h1>Willow</h1>
+    <p>Willow is a character from the Brawl game series, known for her agility and unique abilities.</p>
+
+    <h1>Abilities</h1>
+    <ul>
+        <li>Agility: Willow can move quickly across the battlefield.</li>
+        <li>Special Move: Willow has a special move that allows her to evade attacks.</li>
+        <li>Team Play: She excels in team-based strategies.</li>
+    </ul>
+
+    <h1>Strategy</h1>
+    <p>To play effectively as Willow, focus on mobility and positioning. Use her agility to dodge attacks and strike
+        when the opportunity arises.</p>
+</body>
+
+</html>

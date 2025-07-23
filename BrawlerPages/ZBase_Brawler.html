@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../toggle.css">
+    <script src="../toggle.js"></script>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('headerunder.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+    <h1 class="toggle-title"></h1>
+    <div class="toggle-content" align="center">
+        <img src="../BrawlerPins/_pin.png" alt="ERREUR !" width="200"><br>
+        <b>Nom :</b> <br>
+        <b>Rareté :</b> <br>
+        <b>Type :</b> <br>
+        <b>Vitesse de déplacement :</b> <br>
+        <b>Points de vie :</b> <br><br><br>
+
+        <b>Attaque - :</b> <br>
+        <b>Dégâts par attaque :</b> <br>
+        <b>Portée :</b> <br>
+        <b>Vitesse de rechargement :</b> <br><br><br>
+        <b>Super - :</b> <br>
+        <b>Dégâts du Super :</b> <br>
+        <b>Portée :</b> <br><br><br>
+    </div>
+    <h1 class="toggle-title">Gadgets</h1>
+    <div class="toggle-content">
+        <div style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; text-align: center;">
+                <img src="../Gadget/_gadget1.png" alt="ERREUR !" width="200"><br>
+                <b>Gadget 1 - :</b> <br>
+                <b>Délai :</b> secondes<br>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <img src="../Gadget/_gadget2.png" alt="ERREUR !" width="200"><br>
+                <b>Gadget 2 - :</b> <br>
+                <b>Délai :</b> secondes<br>
+            </div>
+        </div>
+    </div>
+    <h1 class="toggle-title">Star Powers</h1>
+    <div class="toggle-content">
+        <div style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; text-align: center;">
+                <img src="../StarPower/_starpower1.png" alt="ERREUR !" width="200"><br>
+                <b>Star Power 1 - :</b> <br>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <img src="../StarPower/_starpower2.png" alt="ERREUR !" width="200"><br>
+                <b>Star Power 2 - :</b> <br>
+            </div>
+        </div>
+    </div>
+    <h1 class="toggle-title">Hypercharge</h1>
+    <div class="toggle-content">
+        <div style="flex: 1; text-align: center;">
+            <img src="../Hypercharge/_hypercharge.png" alt="ERREUR !" width="200"><br>
+            <b>Hypercharge - :</b> <br>
+        </div>
+    </div>
+
+    <div id="gear-placeholder"></div>
+    <script>
+        fetch('Zgear.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('gear-placeholder').innerHTML = data;
+                if (window.addToggleListeners) {
+                    window.addToggleListeners(document.getElementById('gear-placeholder'));
+                }
+            });
+    </script><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h5 align="center">Made By Fixity</h1>
+</body>
+
+</html>
